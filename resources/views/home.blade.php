@@ -1,4 +1,3 @@
-
 @extends('layouts.main')
 @section('beranda')
 @include('partials.beranda')

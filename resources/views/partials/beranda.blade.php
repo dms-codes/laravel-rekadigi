@@ -5,10 +5,10 @@
                 <div class="container">
                     <div class="row_item align_item">
                         <div class="con_lenght title_header_content aos-init aos-animate" data-aos="fade-right" data-aos-duration="1800">
-                            <h1 class="wrap_title title_header font-xxl">Bergabung dengan GAS</h1>
-                            <p class="font-m">Aplikasi untuk memudahkan pelaku usaha menjangkau calon pembeli lebih luas. Daftarkan tokomu dan nikmati keuntungan bersama GAS!</p>
+                            <h1 class="wrap_title title_header font-xxl">{{ $posts[0]["title_header"] }}</h1>
+                            <p class="font-m">{{ $posts[0]["p"] }}</p>
                             <div class="button button_register txtleft" onclick="button_open()">
-                                <p>Unduh Sekarang</p>
+                                <p>{{ $posts[0]["button_register"] }}</p>
                             </div>
                         </div>
                         <div class="con_lenght image_header_content aos-init aos-animate" data-aos="fade-left" data-aos-duration="1800">

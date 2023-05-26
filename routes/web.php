@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/about', function () {
-    return view('about', [
-        "name" => "Donny Marthen Sitompul",
-        "email" => "donny.marthen@sitompul.id",
+    return view('home', [
+        "title" => "GAS - Welcome to Gas.id",
+        "posts" => Post::all()
     ]);
 });
+

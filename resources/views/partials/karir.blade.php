@@ -6,27 +6,27 @@
                     <div class="content_jobs_container">
                         <div class="hastitle_jobs">
                             <div class="title_jobs">
-                                <h4 class="font-l"><strong>Temukan Karier Impianmu</strong></h4>
+                                <h4 class="font-l"><strong>{{ $posts[4]["title_jobs"] }}</strong></h4>
                             </div>
                             <div class="short_title_jobs">
-                                <h5 class="font-abs">Mari bergabung bersama kami. Jadilah bagian dari kami dan kembangkan bakat, kreatifmu di GAS</h5>
+                                <h5 class="font-abs">{{ $posts[4]["short_title_jobs"] }}</h5>
                             </div>
                         </div>
                         <div class="jobs_container_poster">
-                                                                    <div class="box_jobs">
-                                    <div class="image_jobs">
-                                        <img src="https://gas.id/files/images/digitalmarketing_1616663371.png">
+                            <div class="box_jobs">
+                                <div class="image_jobs">
+                                    <img src="https://gas.id/files/images/digitalmarketing_1616663371.png">
+                                </div>
+                                <div class="box_desc_job">
+                                    <div class="title_job">
+                                        <h4 class="font-m">{{ $posts[4]["box_jobs"][0]["title_job"] }}</h4>
                                     </div>
-                                    <div class="box_desc_job">
-                                        <div class="title_job">
-                                            <h4 class="font-m">Marketing Communication</h4>
-                                        </div>
-                                        <div class="desc_job">
-                                            <p>Merancang strategi komunikasi pemasaran mulai dari branding, iklan dan pemasaran langsung.</p>
-                                        </div>
-                                        <div class="button_job font-lite" onclick="open_descjob('Marketing_Communication')">
-                                            <p>Baca Selengkapnya</p>
-                                        </div>
+                                    <div class="desc_job">
+                                        <p>{{ $posts[4]["box_jobs"][0]["desc_job"] }}</p>
+                                    </div>
+                                    <div class="button_job font-lite" onclick="open_descjob('Marketing_Communication')">
+                                        <p>Baca Selengkapnya</p>
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="onmodal modal_popup modal_cts" id="descmodal_Marketing_Communication">
@@ -40,18 +40,21 @@
                                                     <img src="https://gas.id/files/images/digitalmarketing_1616663371.png">
                                                 </div>
                                                 <div class="title_headlinepopup">
-                                                    <h4>Marketing Communication</h4>
+                                                    <h4>{{ $posts[4]["box_jobs"][0]["title_headlinepopup"] }}</h4>
                                                 </div>
                                             </div>
 
                                             <div class="list_desc_job">
                                                 <ul class="dod_job">
-                                                                                                                <li>Pria / Wanita 25-30 tahun.</li><li>Min. S1 Semua Jurusan.</li><li>Berpengalaman sebagai Marcomm Min 3 tahun.</li>                                                        </ul>
+                                                @foreach ($posts[4]["box_jobs"][0]["dod_job"] as $li)
+                                                    <li>{{ $li }}</li>
+                                                @endforeach
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                                                    <div class="box_jobs">
+                                <div class="box_jobs">
                                     <div class="image_jobs">
                                         <img src="https://gas.id/files/images/contentwriter_1616663403.png">
                                     </div>
